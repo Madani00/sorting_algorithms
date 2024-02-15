@@ -7,4 +7,4 @@ Insertion sort is a sorting algorithm that places an unsorted element at its sui
 (works similarly as we sort cards in our hand in a card game)
 
 ## 2. Selection sort
-Selection sort is a sorting algorithm that selects the smallest element from an unsorted list in each iteration and places that element at the beginning of the unsorted list.
+Selection sort is a sorting algorithm that selects the smallest element from an unsorted list in each iteration and places that element at the beginning of the unsorted list
