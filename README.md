@@ -10,5 +10,5 @@ Insertion sort is a sorting algorithm that places an unsorted element at its sui
 Selection sort is a sorting algorithm that selects the smallest element from an unsorted list in each iteration and places that element at the beginning of the unsorted list.
 
 ## 3 Quick sort
-Quicksort is a sorting algorithm based on the divide and conquer approach.
+Quicksort is a sorting algorithm based on the divide and conquer approach..
  
