@@ -1,13 +1,15 @@
 #include "sort.h"
 
+
 /**
- * insertion_sort_list - sorts a doubly linked list of integers in ascending order
- * @list: list of nodes
- * 
- * Return: void
+ * insertion_sort_list - kaykharaj
+ * @list: kaaima
+ * Return: khawi
  */
 
+
 void insertion_sort_list(listint_t **list)
+
 {
 	listint_t *node = NULL, *tmp = NULL;
 
@@ -17,8 +19,10 @@ void insertion_sort_list(listint_t **list)
 	node = *list;
 	while (node)
 	{
+
 		while (node->next && (node->n > node->next->n))
 		{
+
 			tmp = node->next;
 			node->next = tmp->next;
 			tmp->prev = node->prev;
@@ -33,8 +37,11 @@ void insertion_sort_list(listint_t **list)
 			else
 				*list = tmp;
 			print_list(*list);
+
 		}
 
 		node = node->next;
+
 	}
+
 }

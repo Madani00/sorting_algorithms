@@ -2,21 +2,27 @@
 #define SORT_H
 
 #include <stdio.h>
+#include <time.h>
+
+
 #include <stdlib.h>
 
 
- /**
- * struct listint_s - A node in a doubly linked list.
- *
- * @n: The integer value stored in the node.
- * @prev: A pointer to the previous element in the list.
- * @next: A pointer to the next element in the list.
+/**
+ * struct listint_s - dyalo
+ * @n: li maah
+ * @prev: bhalo
+ * @next: tam nit
  */
+
+
 typedef struct listint_s
 {
+
 	const int n;
 	struct listint_s *prev;
 	struct listint_s *next;
+
 } listint_t;
 
 
