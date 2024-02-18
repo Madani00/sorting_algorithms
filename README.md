@@ -11,4 +11,6 @@ Selection sort is a sorting algorithm that selects the smallest element from an 
 
 ## 3 Quick sort
 Quicksort is a sorting algorithm based on the divide and conquer approach..
+
+## 4. Shell sort - Knuth Sequence
  
