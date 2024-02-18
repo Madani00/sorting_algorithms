@@ -7,13 +7,18 @@
  * @size: the size of the array
  * Return: void
 */
-void quick_sort(int *array, size_t size)
-{
-    if (!array || !size)
-        return;
 
-    recursive_quick(array, 0, size - 1, size);
+void quick_sort(int *array, size_t size)
+
+{
+
+	if (!array || !size)
+	return;
+
+	recursive_quick(array, 0, size - 1, size);
+
 }
+
 
 /**
  * recursive_quick - Recursive helper function for quick_sort
@@ -22,15 +27,20 @@ void quick_sort(int *array, size_t size)
  * @high: The ending index of the partition
  * @size: The size of the array
  */
+
 void recursive_quick(int *array, int low, int high, size_t size)
 {
-    if (low < high)
-    {
-        int pivot_idx = partition(array, low, high, size);
-        recursive_quick(array, low, pivot_idx - 1, size);
-        recursive_quick(array, pivot_idx + 1, high, size);
-    }
+
+	if (low < high)
+	{
+
+	int pivot_idx = partition(array, low, high, size);
+
+	recursive_quick(array, low, pivot_idx - 1, size);
+	recursive_quick(array, pivot_idx + 1, high, size);
+	}
 }
+
 
 /**
  * partition - Implements the partition scheme for quicksort
@@ -41,26 +51,31 @@ void recursive_quick(int *array, int low, int high, size_t size)
  *
  * Return: The final index of the pivot element
  */
+
+
 int partition(int *array, int low, int high, size_t size)
+
 {
-    int pivot = array[high];
-    int i = low - 1, j;
 
-    for (j = low; j <= high - 1; j++)
-    {
-        if (array[j] < pivot)
-        {
-            i++;
-            swap(&array[i], &array[j]);
-        }
-    
-    }
+	int pivot = array[high];
+	int i = low - 1, j;
 
-    swap(&array[i + 1], &array[high]);
-    print_array(array, size);
-    
+	for (j = low; j <= high - 1; j++)
+	{
+	if (array[j] < pivot)
+	{
+	i++;
+	swap(&array[i], &array[j]);
+	}
 
-    return (i + 1);
+	}
+
+	swap(&array[i + 1], &array[high]);
+	print_array(array, size);
+
+
+	return (i + 1);
+
 }
 
 
@@ -69,9 +84,14 @@ int partition(int *array, int low, int high, size_t size)
  * @a: Pointer to the first integer
  * @b: Pointer to the second integer
  */
+
+
 void swap(int *a, int *b)
+
 {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+
 }

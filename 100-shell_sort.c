@@ -1,35 +1,42 @@
 #include "sort.h"
 
+
 /**
- * shell_sort - Sorts an array of integers in ascending order using Shell sort
- * @array: The array to be sorted
- * @size: The size of the array
- * Return: Nothing
+ * shell_sort - dih lih
+ * @array: mnin araj
+ * @size: ajmo
+ * Return: walo
  */
 
+
 void shell_sort(int *array, size_t size)
+
 {
-    size_t gap = 1, i, j;
-    int temp;
 
-    if (array == NULL || size == NULL)
-        return;
+	size_t gap = 1, i, j;
+	int temp;
 
-    for (gap = gap * 3 + 1; gap > 0; gap = (gap - 1) / 3)
-    {
-        for (i = gap; i < size; i++)
-        {
-            temp = array[i];
-            j = i;
+	if (array == NULL || size == NULL)
+	return;
 
-            while (j >= gap && array[j - gap] > temp)
-            {
-                array[j] = array[j - gap];
-                j -= gap;
-            }
+	for (gap = gap * 3 + 1; gap > 0; gap = (gap - 1) / 3)
+	{
 
-            array[j] = temp;
-        }
-        print_array(array, size);
-    }
+	for (i = gap; i < size; i++)
+	{
+	temp = array[i];
+	j = i;
+
+	while (j >= gap && array[j - gap] > temp)
+	{
+
+	array[j] = array[j - gap];
+	j -= gap;
+	}
+
+	array[j] = temp;
+	}
+	print_array(array, size);
+	}
+
 }
