@@ -26,9 +26,9 @@ void recursive_quick(int *array, int low, int high, size_t size)
 {
     if (low < high)
     {
-        int pivot_index = partition(array, low, high, size);
-        recursive_quick(array, low, pivot_index - 1, size);
-        recursive_quick(array, pivot_index + 1, high, size);
+        int pivot_idx = partition(array, low, high, size);
+        recursive_quick(array, low, pivot_idx - 1, size);
+        recursive_quick(array, pivot_idx + 1, high, size);
     }
 }
 
@@ -53,10 +53,12 @@ int partition(int *array, int low, int high, size_t size)
             i++;
             swap(&array[i], &array[j]);
         }
+    
     }
 
     swap(&array[i + 1], &array[high]);
     print_array(array, size);
+    
 
     return (i + 1);
 }
