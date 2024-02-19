@@ -88,7 +88,6 @@ int partition(int *array, int low, int high, size_t size)
 
 
 void swap(int *a, int *b)
-
 {
 
 	int temp = *a;
