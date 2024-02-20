@@ -51,13 +51,13 @@ void _bitonic_sort(int up, int *array, size_t size, size_t start, size_t end)
 
 	if (end - start < 1)
 		return;
-	printf("Merging [%lu/%lu] (%s):\n", end - start + 1, size,
+	printf("Merging [%d/%d] (%s):\n", end - start + 1, size,
 		up ? "UP" : "DOWN");
 	print_array(array + start, end - start + 1);
 	_bitonic_sort(1, array, size, start, mid);
 	_bitonic_sort(0, array, size, mid + 1, end);
 	bitonic_merge(up, array, start, end);
-	printf("Result [%lu/%lu] (%s):\n", end - start + 1, size,
+	printf("Result [%d/%d] (%s):\n", end - start + 1, size,
 		up ? "UP" : "DOWN");
 	print_array(array + start, end - start + 1);
 }
@@ -74,4 +74,18 @@ void bitonic_sort(int *array, size_t size)
 		return;
 
 	_bitonic_sort(1, array, size, 0, size - 1);
+}
+/**
+ * swap - Swaps two integers
+ * @a: Pointer to the first integer
+ * @b: Pointer to the second integer
+ */
+
+void swap(int *a, int *b)
+{
+
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+
 }
