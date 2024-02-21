@@ -1,14 +1,18 @@
 #include "sort.h"
+
+
 /**
- * Swap the positions of two nodes in a doubly-linked list.
- *
- * @a: Address of the first node to swap.
- * @b: Address of the second node to swap.
- *
- * Return: void
+ * swp - blasto fin
+ * @a: onwano
+ * @b: fin kayan
+ * Return: khawi
  */
+
+
 void swp(listint_t *a, listint_t *b)
+
 {
+
 	if (a->prev)
 		a->prev->next = b;
 	if (b->next)
@@ -17,26 +21,32 @@ void swp(listint_t *a, listint_t *b)
 	b->prev = a->prev;
 	a->prev = b;
 	b->next = a;
+
 }
-/*
- * tail_traverse - A function that sorts the list in reverse order, starting from the tail.
- *
- * @head: The head of the list.
- * @tail: The tail of the list.
- * @list: The original head of the list.
- *
- * Return: The new head of the list.
+
+
+/**
+ * tail_traverse - Dala mano
+ * @head: fok lkaima
+ * @tail: mano
+ * @list: dyalha
+ * Return: kayrad lkaima
  */
+
+
 listint_t *tail_traverse(listint_t *head, listint_t *tail, listint_t *list)
 {
+
 	while (tail && tail->prev)
 	{
 		if (tail->n < tail->prev->n)
 		{
+
 			swp(tail->prev, tail);
 			if (tail->prev == NULL)
 				list = tail;
 			print_list(list);
+
 		}
 		else
 			tail = tail->prev;
@@ -44,15 +54,20 @@ listint_t *tail_traverse(listint_t *head, listint_t *tail, listint_t *list)
 			head = tail;
 	}
 	return (head);
+
 }
 
+
 /**
- * cocktailSortList - Sorts a doubly linked list using cocktail shaker sort.
- *
- * @list: Pointer to the doubly linked list to be sorted.
+ * cocktail_sort_list - kharaj mano
+ * @list: kayan fih
  */
+
+
 void cocktail_sort_list(listint_t **list)
+
 {
+
 	listint_t *tail, *head, *len;
 	int i = 0, j = 0, swaped = 1;
 
@@ -73,11 +88,13 @@ void cocktail_sort_list(listint_t **list)
 		{
 			if (head->n > head->next->n)
 			{
+
 				swp(head, head->next);
 				swaped++;
 				if (head->prev->prev == NULL)
 					*list = head->prev;
 				print_list(*list);
+
 			}
 			else
 				head = head->next;
@@ -88,4 +105,5 @@ void cocktail_sort_list(listint_t **list)
 		*list = head;
 		j++;
 	}
+
 }

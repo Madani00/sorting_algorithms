@@ -1,17 +1,20 @@
 #include "sort.h"
 
+
 /**
- * merge_compare - Compares and merges elements in an integer array.
- *
- * @array: The integer array to sort.
- * @start: The start index.
- * @stop: The stop index.
- * @new: The output array.
- *
- * Return: void.
+ * merge_compare - kaykaran
+ * @array: maah
+ * @start: lawal dyalo
+ * @stop: akhir wahad
+ * @new: ach kayban
+ * Return: khawi
  */
+
+
 void merge_compare(int *array, size_t start, size_t stop, int *new)
+
 {
+
 	size_t inc = start, inf, k, mid;
 
 	inf = mid = (start + stop) / 2;
@@ -32,43 +35,52 @@ void merge_compare(int *array, size_t start, size_t stop, int *new)
 		}
 	printf("[Done]: ");
 	print_array(new + start, stop - start);
+
 }
 
+
 /**
- * merge_sort_top_down - Sorts an integer array using a top-down recursive approach.
- *
- * @array: The integer array to sort.
- * @start: The start index.
- * @stop: The stop index.
- * @new: The output array.
- *
- * Return: void.
+ * merge_sort_top_down - mnin kayakhraj
+ * @array: limaah
+ * @start: falwal
+ * @stop: mni kayhbas
+ * @new: ach kayban
+ * Return: khawi
  */
+
+
 void merge_sort_top_down(int *array, size_t start, size_t stop, int *new)
+
 {
+
 	size_t mid;
 
 	mid = (start + stop) / 2;
 	if (stop - start < 2)
 	{
+
 		return;
+
 	}
 	merge_sort_top_down(new, start, mid, array);
 	merge_sort_top_down(new, mid, stop, array);
 	merge_compare(new, start, stop, array);
+
 }
 
 
 /**
- * merge_sort - Sorts an integer array using the merge sort algorithm.
- *
- * @array: The integer array to sort.
- * @size: The size of the array.
- *
- * Return: void.
+ * merge_sort - nidam khoroj
+ * @array: imaah
+ * @size: chhhalfih
+ * Return: khawi
  */
+
+
 void merge_sort(int *array, size_t size)
+
 {
+
 	int *new;
 	size_t inc;
 
@@ -83,4 +95,5 @@ void merge_sort(int *array, size_t size)
 		new[inc] = array[inc];
 	merge_sort_top_down(array, 0, size, new);
 	free(new);
+
 }
